@@ -2097,7 +2097,9 @@ function openAdmin(){try{const b=atob(document.getElementById('adminSrc').textCo
 #pf .pf-h:before{content:"";width:5px;height:16px;border-radius:3px;background:var(--green)}
 #pf .ps-g{border-radius:20px}
 /* إزالة زخرفة الدوائر من الترويسة */
-header:before,header:after{content:none!important;display:none!important}
+header:before{content:none!important;display:none!important}
+header:not(.pfhd){padding-top:calc(10px + env(safe-area-inset-top,0px))!important;padding-bottom:62px!important}
+header:not(.pfhd):after{content:""!important;display:block!important;position:absolute;left:0;right:0;bottom:0;height:4px;z-index:1;pointer-events:none;background:linear-gradient(90deg,var(--green) 0 50%,var(--red) 50% 100%)}
 /* حسابي — توحيد لون كل الأيقونات */
 #pf .ps-g:not(.pf-out) .ps-i{background:var(--navy)}
 </style>
